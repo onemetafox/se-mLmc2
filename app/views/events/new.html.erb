@@ -1,0 +1,25 @@
+<div class='section'>
+    <%= simple_form_for @event do |f|%>
+        <div class='field form-group'>
+            <div class='control' >
+                  <%=f.input :name, placeholder: "Event Name", label: false, input_html: { class: 'form-style' }%>
+            </div>
+        </div>
+        <div class='field'>
+            <div class='control'>
+                <%=f.input :date, placeholder: "Date",label: false, input_html: { class: 'form-style' }%>
+            </div>
+        </div>
+        <div class='field'>
+            <div class='control'>
+                <%=f.input :time, placeholder: "Time",label: false, input_html: { class: 'form-style' }%>
+            </div>
+        </div>
+        <div class='field'>
+            <div class='control'>
+                <%=f.input :description, placeholder: "Description", label: false, input_html: { class: 'form-style' } %>
+            </div>
+        </div>
+        <%= f.button :submit, 'Create Event', class: 'btn btn-outline-dark' %>
+  <%end%>
+</div>

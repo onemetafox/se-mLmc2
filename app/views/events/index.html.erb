@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <% @event.each do |event| %>
+      <tr>
+          <td scope="row"><%= event.name%></td>
+          <td><%= event.date%></td>
+          <td><%= event.time%></td>
+          <td><%= event.description%></td>
+          <td><%= button_to event, method: :get, class: 'btn' do %> <i>Add</i> <% end %> </td>
+      </tr>
+  <%end%>
+</table>

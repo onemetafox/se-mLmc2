@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <% @usergroup.each do |group| %>
+      <tr>
+          <td scope="row"><%= group.name%></td>
+          <td><%= group.date%></td>
+          <td><%= group.time%></td>
+          <td><%= group.description%></td>
+      </tr>
+  <%end%>
+</table>

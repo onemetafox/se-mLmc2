@@ -1,0 +1,20 @@
+<h1 class="title"> Resources <h1>
+
+<section class="section">
+    <div class="container">
+        <% @resources.each do |resource| %>
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4"> <%= link_to resource.name, resource %> </p>
+                        </div>
+                    </div>
+                <div class="description">
+                    <%= resource.description %>
+                </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</section>
